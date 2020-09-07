@@ -5,6 +5,9 @@ FROM alpine:3.11.3
 RUN apk update
 RUN apk add --no-cache --upgrade bash
 
+# Comment in to test
+# COPY test-prj /test-prj
+
 # Copy shell script
 COPY entrypoint.sh /entrypoint.sh
 RUN chmod +x entrypoint.sh
