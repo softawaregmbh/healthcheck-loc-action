@@ -1,6 +1,31 @@
 # HealthCheck LOC Action
 Uses [SCC](https://github.com/boyter/scc) to analyze lines of code, trims the result with [JQ](https://github.com/stedolan/jq) and saves the result as `healthcheck-loc.json` file.
 
+## How to use
+```
+name: healtcheck-loc
+on:
+  push:
+    branches: [ dev ]
+  pull_request:
+    branches: [ dev ]
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Checkout
+      uses: actions/checkout@v2
+
+    - name: LOC Analysis
+      uses: softawaregmbh/healthcheck-loc-action@v1.0.0
+
+    - name: Save as artifact
+      uses: actions/upload-artifact@v2
+      with:
+        name: healthcheck-loc
+        path: ./healthcheck-loc.json
+```
+
 ## Development
 To test the action locally:
 1. Comment int Line 9 in `Dockerfile`
