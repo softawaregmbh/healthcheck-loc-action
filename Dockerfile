@@ -7,6 +7,7 @@ RUN apk add --no-cache --upgrade bash
 
 # Copy shell script
 COPY entrypoint.sh /entrypoint.sh
+RUN chmod +x entrypoint.sh
 
 COPY scc-2.12.0-i386-unknown-linux /scc
 RUN chmod +x /scc
