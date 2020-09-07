@@ -1,0 +1,7 @@
+name: "healthcheck-loc-action"
+description: "Counts the lines of code and saves it as json file"
+runs:
+  using: "docker"
+  image: "Dockerfile"
+  args:
+    - ${{ inputs.args }}

@@ -1,1 +1,1 @@
-# healthcheck-loc-action
+# HealthCheck LOC Action
