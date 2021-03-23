@@ -1,3 +1,5 @@
+# :warning: **NOTE**: This repository is no longer needed/used and therefore archived. :warning:
+
 # HealthCheck LOC Action
 Uses [SCC](https://github.com/boyter/scc) to analyze lines of code, trims the result with [JQ](https://github.com/stedolan/jq) and saves the result as `healthcheck-loc.json` file.
 
